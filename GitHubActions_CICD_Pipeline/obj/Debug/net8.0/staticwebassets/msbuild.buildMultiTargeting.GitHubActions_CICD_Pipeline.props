@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\GitHubActions_CICD_Pipeline.props" />
+</Project>

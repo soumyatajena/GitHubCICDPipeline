@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\GitHubActions_CICD_Pipeline.props" />
+</Project>
