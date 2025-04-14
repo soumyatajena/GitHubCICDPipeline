@@ -1,0 +1,28 @@
+name: .NET CI  # This is the name of your workflow, visible in the Actions tab
+
+on:
+  push:
+    branches: [ "main" ] # This workflow will run when code is pushed to the 'main' branch
+  pull_request:
+    branches: [ "main" ] # This workflow will also run when a pull request is created or updated targeting the 'main' branch
+
+jobs:
+  build: # This defines a job named 'build'
+    runs-on: ubuntu-latest # This job will run on a GitHub-hosted Ubuntu Linux runner
+
+    steps: # These are the individual steps executed in the 'build' job
+    - uses: actions/checkout@v3 # This step checks out your repository's code into the runner
+
+    - name: Setup .NET SDK
+      uses: actions/setup-dotnet@v3 # This step sets up the .NET SDK on the runner
+      with:
+        dotnet-version: '8.0' # Specify the .NET SDK version you want to use (change if needed)
+
+    - name: Restore dependencies
+      run: dotnet restore # This step executes the 'dotnet restore' command to download project dependencies
+
+    - name: Build
+      run: dotnet build --configuration Release --no-restore # This step builds your project in 'Release' configuration
+
+    - name: Test
+      run: dotnet test --no-restore --verbosity normal # This step runs your project's tests (if you have a test project)

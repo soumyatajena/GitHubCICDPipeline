@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GitHubActions_CICD_Pipeline")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+59385aff2e98e761e929364247ab49b7719d874c")]
 [assembly: System.Reflection.AssemblyProductAttribute("GitHubActions_CICD_Pipeline")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GitHubActions_CICD_Pipeline")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
