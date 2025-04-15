@@ -1,0 +1,25 @@
+﻿@page
+@model NasaModel
+
+<h2>@Model.Apod.Title (@Model.Apod.Date)</h2>
+@if (Model.Apod.MediaType == "image")
+{
+    <img src="@Model.Apod.Url" alt="@Model.Apod.Title" class="img-fluid" />
+}
+<p>@Model.Apod.Explanation</p>
+
+<h2>Latest EPIC Earth Images</h2>
+<div class="row">
+    @foreach (var img in Model.EpicImages)
+    {
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="@img.ImageUrl" class="card-img-top" alt="@img.Caption" />
+                <div class="card-body">
+                    <h5 class="card-title">@img.Date</h5>
+                    <p class="card-text">@img.Caption</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
